@@ -2,14 +2,15 @@
   "name": "arithmetic-calculator-task",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "jest",
     "build": "tsc",
     "start": "node dist/index.js",
     "dev": "tsc && node dist/index.js",
+    "test": "jest",
     "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage"
+    "test:coverage": "jest --coverage",
+    "test:calculator": "jest tests/calculator.test.ts"
   },
   "keywords": [],
   "author": "",

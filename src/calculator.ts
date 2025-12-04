@@ -1,6 +1,6 @@
 import { BadSequenceError, DivisionByZeroError } from './errors/customErrors';
 
-//приоритет операторов
+// Приоритет операторов
 const precedence: { [key: string]: number } = {
   '+': 1,
   '-': 1,
@@ -8,12 +8,12 @@ const precedence: { [key: string]: number } = {
   '/': 2
 };
 
-// является ли токен оператором
+// Является ли токен оператором
 function isOperator(token: string): boolean {
   return token in precedence;
 }
 
-// является ли токен числом
+// Является ли токен числом
 function isNumber(token: string): boolean {
   return !isNaN(parseFloat(token)) && isFinite(Number(token));
 }
@@ -53,7 +53,7 @@ export function convertToRPN(expression: string): string {
         throw new BadSequenceError('Double operator found');
       }
 
-      // операторы из стека в выходную очередь
+      // Перемещаем операторы из стека в выходную очередь
       while (
         operatorStack.length > 0 &&
         operatorStack[operatorStack.length - 1] !== '(' &&
@@ -99,7 +99,7 @@ export function convertToRPN(expression: string): string {
 
   // Объединяем выходную очередь в строку
   return outputQueue.join(' ');
-};
+}
 
 export function calculateRPNExpression(expression: string): number {
   if (typeof expression !== 'string') {
@@ -164,4 +164,4 @@ export function calculateRPNExpression(expression: string): number {
   }
 
   return stack[0];
-};
+}

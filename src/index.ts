@@ -18,18 +18,17 @@ function main() {
 
     for (let i = 0; i < testExpressions.length; i++) {
         const expression = testExpressions[i];
-        console.log(` Пример ${i + 1}: ${expression}`);
+        console.log(`Пример ${i + 1}: ${expression}`);
 
         try {
-            //  в обратную польскую нотацию
+            // Конвертируем в обратную польскую нотацию
             const rpn = convertToRPN(expression);
             console.log(`  RPN: ${rpn}`);
 
-            //  Вычисляем результат
+            // Вычисляем результат
             const result = calculateRPNExpression(rpn);
             console.log(`  Результат: ${result}`);
         } catch (error) {
-
             if (error instanceof Error) {
                 console.log(`  Ошибка (${error.name}): ${error.message}`);
             } else {
