@@ -1,0 +1,48 @@
+# Зависимости
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# TypeScript компиляция
+dist/
+build/
+
+# IDE и редакторы
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Операционные системы
+.DS_Store
+Thumbs.db
+
+# Тесты и покрытие кода
+coverage/
+.nyc_output/
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Логи
+logs/
+*.log
+
+# Временные файлы
+tmp/
+temp/
+
+# Документация
+docs/
+
+# Пакеты
+*.tgz
+
+# TypeScript
+*.tsbuildinfo
